@@ -37,7 +37,7 @@ function Top(props) {
                                 </Dropdown.Item>
 
                                 <Dropdown.Item as="a" href=
-                                    "https://www.geeksforgeeks.org/">
+                                    "/">
                                     favourites
                                 </Dropdown.Item>
                             </Dropdown>
