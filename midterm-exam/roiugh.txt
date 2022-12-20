@@ -1,0 +1,6 @@
+    function handleChange(e){
+        e.preventDefault();
+        const { name, value } = e.target;
+        setMessage({ ...messages, [name]: value });
+        console.log(messages)
+      };

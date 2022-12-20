@@ -1,0 +1,12 @@
+.Top{
+    padding: 20px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.HR{
+    width: 90%;
+    margin-left: 60px;
+}

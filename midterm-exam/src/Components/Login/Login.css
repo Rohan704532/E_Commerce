@@ -1,0 +1,42 @@
+.Top{
+    padding: 20px;
+}
+
+.HR{
+    width: 90%;
+    margin-left: 60px;
+}
+.createform{
+    display: flex;
+    flex-direction: column;
+}
+.createmain{
+    margin-left: 537px;
+    width: 397px;
+    border: 1px solid grey;
+    padding: 29px;
+    border-radius: 8px
+}
+
+.h1main{
+    margin-bottom: 27px;
+}
+.divform{
+    display: flex;
+    flex-direction: column;
+}
+.button1{
+    margin: 10px;
+    background-color:  rgb(37, 99, 235);
+    height: 36px;
+    border-radius: 10px;
+    color: white;
+}
+
+.button2{
+    margin: 10px;
+    background-color:  rgb(37, 99, 235);
+    height: 36px;
+    border-radius: 10px;
+    color: white;
+}

@@ -1,0 +1,16 @@
+.Top{
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.HR{
+    width: 90%;
+    margin-left: 60px;
+}
+.flex{
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 74px;
+    justify-content: space-around;
+}

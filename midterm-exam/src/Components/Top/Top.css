@@ -1,0 +1,77 @@
+.logo_img{
+    height:60px;
+    margin-left: 30px;
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginBox{
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    align-items: center;
+    height: 90px;
+}
+
+.dropDown{
+    margin: 0px 15px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin: 0px 11px;
+}
+
+.LoginSign{
+    margin: 0px;
+}
+
+.LoginMar{
+    margin-right: 15px;
+}
+
+.Loginid{
+    -webkit-text-stroke-width: thin;
+}
+
+.main-loginBox{
+    display: flex;
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.ul>ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.Hr{
+    width: 92%;
+    height: 2px;
+    margin-left: 40px;
+}
+.ul{
+    margin-top: 30px;
+}
+.App{
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Link{
+    color: black;
+}
