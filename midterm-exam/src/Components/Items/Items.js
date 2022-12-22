@@ -1,6 +1,5 @@
 import "./Items.css"
 import { useState } from "react";
-import Top from "../Top/Top"
 
 function Items(props) {
 
@@ -9,9 +8,13 @@ function Items(props) {
         setActive(!active);
     };
 
+    const[arry, setarry] = useState([]);
+
     const [add, setAdd] = useState(false);
     const AddRemove = () => {
         setAdd(!active);
+        setarry(...arry,props.data.image)
+        console.log(arry)
     };
 
     return (
