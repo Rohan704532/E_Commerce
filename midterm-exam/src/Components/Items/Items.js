@@ -8,14 +8,11 @@ function Items(props) {
         setActive(!active);
     };
 
-    const[arry, setarry] = useState([]);
-
     const [add, setAdd] = useState(false);
-    const AddRemove = () => {
-        setAdd(!active);
-        setarry(...arry,props.data.image)
-        console.log(arry)
-    };
+    const addOrRemove=()=>{
+        setAdd(!add);
+        localStorage.setItem("Image", props.data.image)
+    }
 
     return (
         <>
@@ -37,14 +34,14 @@ function Items(props) {
                         <div className="star-box">
                             <img className="star" src="https://static.vecteezy.com/system/resources/previews/004/256/658/original/five-star-customer-product-ratings-review-flat-icons-for-apps-and-websites-illustration-of-five-golden-yellow-stars-in-a-row-isolated-in-a-white-background-concepts-for-ratings-customers-review-free-vector.jpg"></img>
                         </div>
-                        <div className="count">(120)</div>
+                        <div className="count">.{props.data.rating.count}</div>
                     </div>
                     <div className="price">
-                        <div>$109</div>
+                        <div>{props.data.price}</div>
                         <div className="last-digit">95</div>
                     </div>
                     <div>
-                        <button onClick={AddRemove} style={{ backgroundColor: add ? "red" : "rgba(37,99,235,255)" }}className="button">{add?"Remove from Cart":"Add to Cart"}</button>
+                        <button onClick={addOrRemove} style={{ backgroundColor: add ? "red" : "rgba(37,99,235,255)" }}className="button">{`${add?"Remove from cart":"Add to cart"}`}</button>
                     </div>
                 </div>
             </div>
