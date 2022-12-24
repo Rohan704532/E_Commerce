@@ -1,14 +1,73 @@
-.Top{
-    padding: 20px;
-}
-
-.HR{
-    width: 90%;
-    margin-left: 60px;
-}
 .flex{
     flex-wrap: wrap;
     display: flex;
     margin-top: 74px;
     justify-content: space-around;
+}
+
+.item-box{
+    border: 1px solid grey;
+    width: 315px;
+    padding: 18px;
+    height: 650px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+img{
+    width: 200px;
+}
+
+.wishlist{
+    display: flex;
+    justify-content: end;
+}
+
+.wishlist svg{
+    cursor: pointer;
+}
+
+.svg{
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+.product-img{
+    margin-right: 10px;
+    margin-top: 12px;
+    height: 331px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.ratings{
+    display: flex;
+}
+
+.count{
+    display: flex;
+    align-items: center;
+}
+.star{
+    width: 100px;
+}
+
+.last-digit{
+    font-size: 12px;
+    margin-left: 2px;
+}
+.button{
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgba(37,99,235,255);
+    width: 272px;
+    height: 37px;
+    color: white;
+}
+.brand{
+    height: 100px;
+}
+.price{
+    display: flex;
+    margin-bottom: 10px;
 }

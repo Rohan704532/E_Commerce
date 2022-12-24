@@ -55,7 +55,7 @@ function Top(props) {
                     <Link to="/"><li className="Link">All</li></Link>
                     <Link to="/Electronics"><li className="Link">Electronics</li></Link>
                     <Link to="/Jewellery"><li className="Link">Jewellery</li></Link>
-                    <Link to="/men's clothing"><li className="Link">Men's Clothing</li></Link>
+                    <Link to="/Menclothing"><li className="Link">Men's Clothing</li></Link>
                     <li className="Link">Women's Clothing</li>
                 </ul>
             <hr className="Hr"></hr>

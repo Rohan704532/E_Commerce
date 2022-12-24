@@ -1,10 +1,11 @@
 
-const images = {...localStorage}
 
-function Cart(){
+const image = {text:localStorage.getItem("image")}
+console.log(image)
+function cart(){
     return(
-        <div>{images}</div>
+        <div>{image}</div>
     )
 }
 
-export default Cart;
+export default cart;
