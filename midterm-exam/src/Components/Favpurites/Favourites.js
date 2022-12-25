@@ -4,7 +4,7 @@ import React from 'react'
 function Favourites(props) {
  
     const {Favorite,addToFavorites,addToCart}=props
-
+console.log(Favorite,"test")
      return (
         <div className='product-page'>
             {Favorite.length>0?Favorite.map((item,index)=>{
