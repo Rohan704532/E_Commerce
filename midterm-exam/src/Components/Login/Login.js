@@ -29,12 +29,6 @@ function Login() {
 
     return (
         <>
-            <div>
-                <div className="Top">
-                    <Top />
-                </div>
-            </div>
-
             <div className='createmain'>
                 <div>
                     <h1 className='h1main'>Login</h1>

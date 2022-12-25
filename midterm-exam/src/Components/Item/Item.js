@@ -1,5 +1,6 @@
-import "./All.css"
+import "./Item.css"
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 
 function All(props) {
 
@@ -26,7 +27,7 @@ function All(props) {
                         </div>
 
                         <div className='product-img'>
-                            <img src={item.image} alt='product' />
+                            <Link to="/Detail"><img src={item.image} alt='product' /></Link>
                         </div>
 
                         <div className='brand'>
@@ -41,8 +42,7 @@ function All(props) {
                             </div>
 
                             <div className="price">
-                                <div>{item.price}</div>
-                                <div className="last-digit">95</div>
+                                <div>${item.price}</div>
                             </div>
 
                             <button onClick={() => addToCart(item)} className={` ${cart.includes(item) ? 'button Added-class' : 'button'}`} > {cart.includes(item) ? 'Remove from Cart' : 'Add to Cart'} </button>

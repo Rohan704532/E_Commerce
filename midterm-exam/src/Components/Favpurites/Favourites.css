@@ -1,0 +1,12 @@
+.Added-class{
+    background-color: red;
+    color: white;
+}
+.button{
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgba(37,99,235,255);
+    width: 272px;
+    height: 37px;
+    color: white;
+}

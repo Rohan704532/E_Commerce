@@ -6,6 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 .loginBox{
@@ -74,4 +75,15 @@
 
 .Link{
     color: black;
+}
+.span{
+    position: absolute;
+    background-color: rgb(218, 8, 8);
+    color: white;
+    border-radius: 70%;
+    width: 20px;
+    font-size: 12px;
+    text-align: center;
+    left: 1479px;
+    top: 52px;
 }

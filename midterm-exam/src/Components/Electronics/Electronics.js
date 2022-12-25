@@ -44,7 +44,7 @@ function Electronics(props) {
                         <div className="last-digit">95</div>
                     </div>
 
-                    <button onClick={() => props.addToCart(item)} className={` ${props.cart.includes(item) ? 'addtocart Added-class' : 'addtocart'}`} >{props.cart.includes(item) ? 'Remove from Cart' : 'Add to Cart'} </button>
+                    <button onClick={() => props.addToCart(item)} className={` ${props.cart.includes(item) ? 'button Added-class' : 'button'}`} >{props.cart.includes(item) ? 'Remove from Cart' : 'Add to Cart'} </button>
 
 
 

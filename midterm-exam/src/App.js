@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Routes, Route } from "react-router-dom"
-import All from "./Components/All/All"
+import All from "./Components/Item/Item"
 import Electronics from "./Components/Electronics/Electronics"
 import Jewellery from "./Components/Jewellery/Jewellery"
 import Mens from "./Components/Men's clothing/Men-clothing"
@@ -11,6 +11,9 @@ import Login from "./Components/Login/Login"
 import Cart from "./Components/Cart/Cart"
 import { useState } from "react";
 import Top from "./Components/Top/Top"
+import Women from "./Components/Women-clothing/Women"
+import Details from "./Components/Detail/Detail"
+import Favourites from "./Components/Favpurites/Favourites"
 
 function App() {
 
@@ -24,12 +27,17 @@ function App() {
       cart.push(para)
     }
     setCart([...cart])
-    console.log(cart)
     
 }
 
-const [Favorate,setFavorites] = useState([]);
 
+const [Detail, setDetails] = useState([]);
+
+function showDetails(params){
+  setDetails(...Detail)
+}
+
+const [Favorate,setFavorites] = useState([]);
 function addToFavorites(params){
        
   if(Favorate.includes(params)){
@@ -40,20 +48,22 @@ function addToFavorites(params){
 
   setFavorites([...Favorate])
   console.log(Favorate)
-  // setHeart(heart)
 }
 
     return (
         <>
-        <Top/>
+        <Top noItem={cart.length}/>
         <Routes>
             <Route path="/" element={<All Favorite={Favorate} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
-            <Route path="/Electronics" element={<Electronics />}></Route>
-            <Route path="/Jewellery" element={<Jewellery />}></Route>
-            <Route path="/men's clothing" element={<Mens />}></Route>
+            <Route path="/Electronics" element={<Electronics Favorite={Favorate} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/Jewellery" element={<Jewellery Favorite={Favorate} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/men clothing" element={<Mens Favorite={Favorate} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/Women clothing" element={<Women Favorite={Favorate} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
             <Route path="/Sign_up" element={<Sign_Up />}></Route>
+            <Route path='/favorites' element={ <Favourites Favorite={Favorate} cart={cart} addToFavorites={addToFavorites} addToCart={addToCart}/>} ></Route>
             <Route path="/Login" element={<Login />}></Route>
-            <Route path="/Cart" element={<Cart />}></Route>
+            <Route path="/Cart" element={<Cart cart={cart} addToCart={addToCart} />}></Route>
+            <Route path="/Detail" element={<Details cart={cart} showDetails={showDetails} Favorite={Favorate} addToFavorites={addToFavorites} addToCart={addToCart}/>}></Route>
         </Routes>
         </>
     )
