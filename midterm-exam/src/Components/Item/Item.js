@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 function All(props) {
 
-    const {addToFavorites,Favorite, cart, addToCart } = props
+    const {addToFavorites,Favorite, cart, addToCart, showDetails } = props
 
     const [product, setData] = useState([])
     useEffect(() => {
@@ -27,7 +27,7 @@ function All(props) {
                         </div>
 
                         <div className='product-img'>
-                            <Link to="/Detail"><img src={item.image} alt='product' /></Link>
+                            <Link to="/Detail"><img onClick={()=>showDetails(item)} src={item.image} alt='product' /></Link>
                         </div>
 
                         <div className='brand'>

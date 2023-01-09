@@ -1,0 +1,39 @@
+.main-cont{
+    border: 1px solid grey;
+    margin-top: 83px;
+    margin-left: 427px;
+    width: 740px;
+    border-radius: 10px;
+    padding: 35px;
+    margin-bottom: 100px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+}
+.buttonC{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.b{
+    color: red;
+    font-size: 20px;
+}
+
+.desc{
+    font-size: larger;
+}

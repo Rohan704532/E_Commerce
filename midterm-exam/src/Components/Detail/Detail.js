@@ -1,62 +1,38 @@
-import  '../Item/Item.css';
+import './Detail.css';
 import React from 'react'
+import { Link } from "react-router-dom"
 
 
 function Detail(props) {
- 
-    const {showDetails, Favorite,addToFavorites,addToCart}=props
 
-     return (
-        <div className='product-page'>
-                {showDetails.length>0?showDetails.map((item,index)=>{
-                    return(<div className='product-cartdetails' key={index}>
-                          <div className='favorites-div'  >
-                          <svg onClick={()=>addToFavorites(item)} xmlns="http://www.w3.org/2000/svg" className="_1l0elc" width="18" height="18" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill={`${Favorite.includes(item)?'red':'currentColor'}`} className="eX72wL" stroke="#FFF" fillRule="evenodd" opacity=".9"></path></svg>
+    const { Favorite, addToFavorites, addToCart, Detail, cart } = props
+    console.log(Detail)
 
-                          </div>
-    
-                         <div className='image-container'>
-                                  <img className='pro-image' src={item.image} alt='product'/>
-                        </div>
-    
-                         <div className='product-details'> 
-                                  <p className='product-title'><b>Brand, </b><span>{item.title}</span></p>
-                                      <span>
-                                          <div className="star-rating">
-                                            <div className="empty-stars">
-                                                <i className="fa fa-star" aria-hidden="true"></i>
-                                                <i className="fa fa-star" aria-hidden="true"></i>
-                                                <i className="fa fa-star" aria-hidden="true"></i>
-                                                <i className="fa fa-star" aria-hidden="true"></i>
-                                                <i className="fa fa-star" aria-hidden="true"></i>
-                                                
-                                                <div className="ratestar" style={{width: `${props.Rating(item.rating.rate)}`}}>
-                                                    <i className="fa fa-star" aria-hidden="true"></i>
-                                                    <i className="fa fa-star" aria-hidden="true"></i>
-                                                    <i className="fa fa-star" aria-hidden="true"></i>
-                                                    <i className="fa fa-star" aria-hidden="true"></i>
-                                                    <i className="fa fa-star" aria-hidden="true"></i>
-                                                </div>
-                                      
-                                            </div> &nbsp;
-    
-                                                <span>{`(${item.rating.count})`}</span>
-                                        </div>
-    
-                                  </span> 
-    
-    
-                                  <div className='price-tag'><span>$&nbsp;</span>{item.price}</div>
-    
-                                  <button onClick={() => addToCart(item)} className={` ${props.cart.includes(item) ? 'button Added-class' : 'button'}`} > {props.cart.includes(item) ? 'Remove from Cart' : 'Add to Cart'} </button>
-
-                            </div>
-    
-                   </div>)}) : ''}
-           
-            
+    return (
+        <div className='main-cont'>
+            <div className='title'>
+                <h2>{Detail.title}</h2>
+            </div>
+            <div className='img'>
+                <img src={Detail.image} />
+            </div>
+            <div className='desc'>
+                <p><b className='b'>Description:-</b>{Detail.description}</p>
+            </div>
+            <div className='price'>
+                <p><b className='b'>Price:-</b>${Detail.price}</p>
+                <div className='heart'>
+                    <svg onClick={() => addToFavorites(Detail)} xmlns="http://www.w3.org/2000/svg" className="_1l0elc" width="22" height="22" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill={`${Favorite.includes(Detail) ? 'red' : 'currentColor'}`} className="eX72wL" stroke="#FFF" fillRule="evenodd" opacity=".9"></path></svg>
+                </div>
+            </div>
+            <div className='buttonC'>
+                <button onClick={() => addToCart(Detail)} className={` ${cart.includes(Detail) ? 'button Added-class' : 'button'}`} > {cart.includes(Detail) ? 'Remove from Cart' : 'Add to Cart'} </button>
+            </div>
+            <div className='buttonC'>
+                <Link to="/"><button className='button'>Back to Items</button></Link>
+            </div>
         </div>
-      );
+    );
 }
 
 

@@ -1,4 +1,4 @@
-import Top from "../Top/Top"
+
 import React, { useState } from 'react';
 import { Formik, Form, Field } from 'formik'
 import * as Yup from "yup"
@@ -28,6 +28,7 @@ function Sign_up() {
 
     const handleTaskSubmit = async(e)=>{
         navigate("/")
+        console.log(messages)
     };
 
 

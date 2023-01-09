@@ -2,11 +2,11 @@ import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Routes, Route } from "react-router-dom"
-import All from "./Components/Item/Item"
+import Items from "./Components/Item/Item"
 import Electronics from "./Components/Electronics/Electronics"
 import Jewellery from "./Components/Jewellery/Jewellery"
 import Mens from "./Components/Men's clothing/Men-clothing"
-import Sign_Up from "./Components/Sign_up/Sign_up"
+import SignUp from "./Components/Sign_up/Sign_up"
 import Login from "./Components/Login/Login"
 import Cart from "./Components/Cart/Cart"
 import { useState } from "react";
@@ -34,36 +34,37 @@ function App() {
 const [Detail, setDetails] = useState([]);
 
 function showDetails(params){
-  setDetails(...Detail)
+  setDetails(params)
+  console.log(Detail)
 }
 
-const [favs,setFavorites] = useState([]);
+const [Favorite,setFavorites] = useState([]);
+
 function addToFavorites(params){
-       
-  if(favs.includes(params)){
-    favs.splice(favs.indexOf(params),1)
+  if(Favorite.includes(params)){
+    Favorite.splice(Favorite.indexOf(params),1)
   }else{
-    favs.push(params)
+    Favorite.push(params)
   }
 
-  setFavorites([...favs])
-  console.log(favs)
+  setFavorites([...Favorite])
+  console.log(Favorite)
 }
 
     return (
         <>
         <Top noItem={cart.length}/>
         <Routes>
-            <Route path="/" element={<All Favorite={favs} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
-            <Route path="/Electronics" element={<Electronics Favorite={favs} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
-            <Route path="/Jewellery" element={<Jewellery Favorite={favs} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
-            <Route path="/men clothing" element={<Mens Favorite={favs} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
-            <Route path="/Women clothing" element={<Women Favorite={favs} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
-            <Route path="/Sign_up" element={<Sign_Up />}></Route>
-            <Route path='/favorites' element={ <Favourites Favorite={favs} cart={cart} addToFavorites={addToFavorites} addToCart={addToCart}/>} ></Route>
+            <Route path="/" element={<Items Detail={Detail} showDetails={showDetails} Favorite={Favorite} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/Electronics" element={<Electronics Detail={Detail} showDetails={showDetails} Favorite={Favorite} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/Jewellery" element={<Jewellery Detail={Detail} showDetails={showDetails} Favorite={Favorite} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/men clothing" element={<Mens Detail={Detail} showDetails={showDetails} Favorite={Favorite} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/Women clothing" element={<Women Detail={Detail}showDetails={showDetails} Favorite={Favorite} addToFavorites={addToFavorites} cart={cart} addToCart={addToCart}/>}></Route>
+            <Route path="/Sign_up" element={<SignUp />}></Route>
+            <Route path='/favorites' element={ <Favourites Detail={Detail} showDetails={showDetails} Favorite={Favorite} cart={cart} addToFavorites={addToFavorites} addToCart={addToCart}/>} ></Route>
             <Route path="/Login" element={<Login />}></Route>
             <Route path="/Cart" element={<Cart cart={cart} addToCart={addToCart} />}></Route>
-            <Route path="/Detail" element={<Details cart={cart} showDetails={showDetails} Favorite={favs} addToFavorites={addToFavorites} addToCart={addToCart}/>}></Route>
+            <Route path="/Detail" element={<Details cart={cart} showDetails={showDetails} Favorite={Favorite} addToFavorites={addToFavorites} Detail={Detail}addToCart={addToCart}/>}></Route>
         </Routes>
         </>
     )

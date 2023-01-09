@@ -6,8 +6,6 @@ import "rsuite/dist/rsuite.min.css";
 
 function Top({noItem}) {
 
-    console.log(noItem)
-
     return (
         <div>
             <div className="mainContainer">
