@@ -7,7 +7,7 @@ import "rsuite/dist/rsuite.min.css";
 function Top({noItem}) {
 
     return (
-        <div>
+        <div className="mainmain">
             <div className="mainContainer">
                 <div>
                 <Link to="/"><img className="logo_img" alt="Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Logos.svg/800px-Logos.svg.png"></img></Link>
